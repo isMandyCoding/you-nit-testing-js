@@ -1,30 +1,3 @@
-const order = {
-  items: [
-    {
-      name: "Hair Growth Potion",
-      amount: 25,
-      quantity: 1,
-      weight: 2,
-    },
-    {
-      name: "Wakey Time Potion",
-      amount: 9,
-      quantity: 2,
-      weight: 3,
-    },
-    {
-      name: "Shipping",
-      amount: 5,
-      shipping: true,
-    },
-    {
-      name: "First Time Customer Discount",
-      amount: 4,
-      discount: true,
-    },
-  ],
-};
-
 function orderSubtotal(order) {
   console.log(order.items.reduce);
 
@@ -48,6 +21,5 @@ function orderSubtotal(order) {
 // console.log(orderSubtotal(order)); //expect 28
 const orderFunctions = {
   orderSubtotal,
-  order,
 };
 module.exports = orderFunctions;

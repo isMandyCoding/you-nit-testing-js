@@ -63,7 +63,7 @@ const order = {
       weight: 2,
     },
     {
-      name: "Always Alert Potion",
+      name: "Wakey Time Potion",
       amount: 9,
       quantity: 2,
       weight: 3,
