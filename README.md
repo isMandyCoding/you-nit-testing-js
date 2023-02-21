@@ -40,6 +40,48 @@ Before we get to our example, complete the following steps to get set up.
 
 For our example today, I thought it would be useful to take a simple scenario with some basic requirements described and write the unit tests for the function before implementing.
 
-We've been asked to write a function that finds the order subtotal for a restaurant app. The function receives an array of item prices in US currency format (i.e. [5.00, 4.50, 2.00]), and should return the total dollar amount for all the item prices in the array.
+For our scenario, we work at a magical potion shop that has an ecommerce website. We've been asked to write a function that calculates the order total for our magic shop. It should fulfill the following requirements:
 
-For example, if passed the array [5.00, 4.50, 2.00], the function should return 11.50.
+- It should add the price of each item multiplied by the quantity to include in the total
+- If the item price total is less than 100, it should include the price of shipping
+- If all items can be transported by broomstick and there is a shipping cost, the shipping should be 50% off. An item can be transported by broomstick if its weight is less than 5 (magical weight units)
+- It should subtract any discounts
+
+- For a stretch challenge, add a function that calculates the total tax and adds it to the total, returning that new total amount.
+
+This might seem like a lot of requirements to consider, and thus might be overwhelming. That's where unit tests come in! By breaking the requirements down into smaller pieces (or units, if you wil) and writing tests for these requirements, we can focus on meeting them without getting worried about too many details.
+
+The order object will look like so:
+
+```
+const order = {
+  items: [
+    {
+      name: "Hair Growth Potion",
+      amount: 25,
+      quantity: 1,
+      weight: 2,
+    },
+    {
+      name: "Always Alert Potion",
+      amount: 9,
+      quantity: 2,
+      weight: 3,
+    },
+    {
+      name: "Shipping",
+      amount: 5,
+      shipping: true,
+    },
+    {
+      name: "First Time Customer Discount",
+      amount: 4,
+      discount: true,
+    },
+  ],
+};
+```
+
+## Writing test stubs
+
+Let's translate our requirements into test stubs. We won't worry about implementing the tests just yet. For our example, we're going to use Jest. To make things easier on ourselves, let's download jest types and add the necessary
