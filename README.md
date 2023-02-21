@@ -1,4 +1,5 @@
 # YOU-NIT TESTS IN JAVASCRIPT
+![image](https://user-images.githubusercontent.com/35410313/220239783-0f56222b-09f1-45a6-ac3d-98dc983c9816.png)
 
 This is a repo to accompany the Unit Tests demo for the [Phoenix Javascript Meetup](https://www.meetup.com/phoenix-javascript/events/291064279/) on 3/15/2023. Today, we'll be covering the basics of unit testing in Javascript. We'll discuss why to write tests, briefly go over types of tests, and do a demo on writing unit tests in Javascript using [Jest](https://jestjs.io). For this demo, we're going to imagine we're writing code for a small ticket for a restaurant app.
 
