@@ -1,4 +1,4 @@
-function orderSubtotal(order) {
+function getOrderSubtotal(order) {
   console.log(order.items.reduce);
 
   // let subtotal = 0;
@@ -18,8 +18,8 @@ function orderSubtotal(order) {
   // }, 0);
 }
 
-// console.log(orderSubtotal(order)); //expect 28
+// console.log(getOrderSubtotal(order)); //expect 28
 const orderFunctions = {
-  orderSubtotal,
+  getOrderSubtotal,
 };
 module.exports = orderFunctions;
